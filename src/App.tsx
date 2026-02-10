@@ -1,12 +1,16 @@
-import React from "react";
-import { LoginButton } from "./auth/LoginButton";
+import { useEffect, useState } from "react";
+import { LoginPage } from "./pages/LoginPage";
+import { ForbiddenPage } from "./pages/ForbiddenPage";
+import { AdminPage } from "./pages/AdminPage";
+import { jsx as _jsx } from "react/jsx-runtime";
+import { useAuth } from "./hooks/useAuth";
 
-export default function App() {
-  return (
-    <div>
-      <h1>Admin Carteira FII</h1>
-      <p>React funcionando 🚀</p>
-      <LoginButton />
-    </div>
-  );
-}
+export const App = () => {
+  const { status } = useAuth();
+
+  if (status === "loading") return <p>Carregando…</p>;
+  if (status === "unauthenticated") return <LoginPage />;
+  if (status === "forbidden") return <ForbiddenPage />;
+
+  return <AdminPage />;
+};
