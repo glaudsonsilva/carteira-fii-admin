@@ -1,4 +1,4 @@
-export const FullScreenLoader = () => {
+export const AuthLoader = () => {
   return (
     <div className="auth-container">
       <div className="auth-card loader-card">
