@@ -1,6 +1,4 @@
-import { render, screen, waitFor } from "@testing-library/react";
-import { GoogleOAuthProvider } from "@react-oauth/google";
-import { App } from "./App";
+import { screen, waitFor } from "@testing-library/react";
 import { beforeEach, expect, test, vi } from "vitest";
 import { AppRoutes } from "./routes/AppRoutes";
 import { renderWithRouter } from "./test/renderWithRouter";
