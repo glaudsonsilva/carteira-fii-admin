@@ -1,6 +1,7 @@
 import { Navigate } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
 import type { JSX } from "react";
+import { FullScreenLoader } from "../components/FullscreenLoader";
 
 type Props = {
   children: JSX.Element;
@@ -10,7 +11,7 @@ export const ProtectedRoute = ({ children }: Props) => {
   const { status } = useAuth();
 
   if (status === "loading") {
-    return <p>Carregando…</p>;
+    return <FullScreenLoader />;
   }
 
   if (status === "unauthenticated") {

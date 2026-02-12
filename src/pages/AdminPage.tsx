@@ -4,7 +4,7 @@ export const AdminPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div className="card">
       <h2>Admin</h2>
       <p>Você está logado ✅</p>
 
