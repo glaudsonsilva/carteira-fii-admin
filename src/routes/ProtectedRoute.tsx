@@ -1,7 +1,7 @@
 import { Navigate } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
 import type { JSX } from "react";
-import { FullScreenLoader } from "../components/FullscreenLoader";
+import { FullScreenLoader } from "../components/ScreenLoader";
 
 type Props = {
   children: JSX.Element;
