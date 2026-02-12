@@ -33,7 +33,7 @@ describe("ProtectedRoute", () => {
 
     renderRoute();
 
-    expect(screen.getByText(/carregando/i)).toBeInTheDocument();
+    expect(screen.getByText(/Verificando acesso/i)).toBeInTheDocument();
   });
 
   it("redirects to login when unauthenticated", async () => {
