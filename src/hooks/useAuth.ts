@@ -17,7 +17,7 @@ export const useAuth = () => {
       return;
     }
 
-    fetch(`${import.meta.env.VITE_API_URL}/admin/me`, {
+    fetch(`${import.meta.env.VITE_API_URL}/api/admin/me`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

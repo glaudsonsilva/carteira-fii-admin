@@ -1,4 +1,4 @@
-import { Outlet, useNavigate } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 
 export const AdminLayout = () => {
   const navigate = useNavigate();
@@ -23,7 +23,9 @@ export const AdminLayout = () => {
           <nav>
             <ul>
               <li>Dashboard</li>
-              <li>Relatórios</li>
+              <li>
+                <Link to="/fii-check">Verificar FII</Link>
+              </li>
               <li>Configurações</li>
             </ul>
           </nav>

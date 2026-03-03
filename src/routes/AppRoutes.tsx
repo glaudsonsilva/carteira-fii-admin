@@ -4,6 +4,7 @@ import { ForbiddenPage } from "../pages/ForbiddenPage";
 import { ProtectedRoute } from "./ProtectedRoute";
 import { AdminLayout } from "../layouts/AdminLayout";
 import { AdminPage } from "../pages/AdminPage";
+import { FiiCheckPage } from "../pages/FiiCheck/FiiCheckPage";
 
 export const AppRoutes = () => {
   return (
@@ -17,7 +18,8 @@ export const AppRoutes = () => {
           </ProtectedRoute>
         }
       >
-        <Route path="/" element={<AdminPage />} />
+        <Route index element={<AdminPage />} />
+        <Route path="/fii-check" element={<FiiCheckPage />} />
       </Route>
     </Routes>
   );
